@@ -1,21 +1,12 @@
 import "./App.css";
-import { AboutCard } from "./components/AboutCard";
-import { LinksCard } from "./components/LinksCard";
-import { ParticleBackground } from "./components/ParticleBackground";
-import { ProfileCard } from "./components/ProfileCard";
-import { SkillsCard } from "./components/SkillsCard";
+import { SceneProvider } from "./context/SceneContext";
+import { Scene3D } from "./components/Scene3D";
 
 function App() {
   return (
-    <>
-      <ParticleBackground />
-      <div className="container" style={{ position: "relative", zIndex: 1 }}>
-        <ProfileCard />
-        <AboutCard />
-        <SkillsCard />
-        <LinksCard />
-      </div>
-    </>
+    <SceneProvider>
+      <Scene3D />
+    </SceneProvider>
   );
 }
 
